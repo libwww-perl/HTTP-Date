@@ -1,6 +1,6 @@
 package HTTP::Date;
 
-$VERSION = "6.02";
+our $VERSION = "6.02";
 
 require Exporter;
 @ISA = qw(Exporter);
@@ -258,11 +258,9 @@ sub time2isoz (;$)
 1;
 
 
+# ABSTRACT: HTTP::Date - date conversion routines
+#
 __END__
-
-=head1 NAME
-
-HTTP::Date - date conversion routines
 
 =head1 SYNOPSIS
 
@@ -377,12 +375,5 @@ string representing Universal Time.
 =head1 SEE ALSO
 
 L<perlfunc/time>, L<Time::Zone>
-
-=head1 COPYRIGHT
-
-Copyright 1995-1999, Gisle Aas
-
-This library is free software; you can redistribute it and/or
-modify it under the same terms as Perl itself.
 
 =cut
