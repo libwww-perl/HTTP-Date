@@ -21,7 +21,6 @@ my %WriteMakefileArgs = (
     "Time::Local" => 0,
     "Time::Zone" => 0,
     "strict" => 0,
-    "vars" => 0
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
@@ -50,7 +49,6 @@ my %FallbackPrereqs = (
   "Time::Local" => 0,
   "Time::Zone" => 0,
   "strict" => 0,
-  "vars" => 0,
   "warnings" => 0
 );
 
