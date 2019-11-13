@@ -1,16 +1,17 @@
 package HTTP::Date;
 
+use strict;
+
 our $VERSION = '6.04';
 
 require Exporter;
-@ISA = qw(Exporter);
-@EXPORT = qw(time2str str2time);
-@EXPORT_OK = qw(parse_date time2iso time2isoz);
+our @ISA = qw(Exporter);
+our @EXPORT = qw(time2str str2time);
+our @EXPORT_OK = qw(parse_date time2iso time2isoz);
 
-use strict;
 require Time::Local;
 
-use vars qw(@DoW @MoY %MoY);
+our (@DoW, @MoY, %MoY);
 @DoW = qw(Sun Mon Tue Wed Thu Fri Sat);
 @MoY = qw(Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec);
 @MoY{@MoY} = (1..12);
