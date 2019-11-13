@@ -1,6 +1,6 @@
 package HTTP::Date;
 
-our $VERSION = "6.02";
+our $VERSION = '6.04';
 
 require Exporter;
 @ISA = qw(Exporter);
