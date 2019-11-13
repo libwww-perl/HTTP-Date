@@ -1,7 +1,8 @@
 Change history for HTTP-Date
 
 {{$NEXT}}
-    - Moved GitHub repo to libwww-perl organization
+    - RT123557 Fix for DST test issues (GH#14) (@pludlamCVL)
+    - Add Travis tests and convert to Dist::Zilla (GH#13) (Olaf Alders)
 
 6.02    2012-03-30
     - Added support for parsing dates with (faulty) double TZ spec [RT#75150]
