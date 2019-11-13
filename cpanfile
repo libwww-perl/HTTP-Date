@@ -8,8 +8,11 @@ requires "vars" => "0";
 on 'test' => sub {
   requires "ExtUtils::MakeMaker" => "0";
   requires "File::Spec" => "0";
+  requires "IO::Handle" => "0";
+  requires "IPC::Open3" => "0";
   requires "Test" => "0";
   requires "Test::More" => "0";
+  requires "perl" => "5.006002";
   requires "warnings" => "0";
 };
 
@@ -26,17 +29,22 @@ on 'develop' => sub {
   requires "Code::TidyAll::Plugin::SortLines::Naturally" => "0.000003";
   requires "Code::TidyAll::Plugin::Test::Vars" => "0.04";
   requires "Code::TidyAll::Plugin::UniqueLines" => "0.000003";
+  requires "Encode" => "0";
   requires "Parallel::ForkManager" => "1.19";
   requires "Perl::Critic" => "1.132";
   requires "Perl::Tidy" => "20180220";
   requires "Pod::Coverage::TrustPod" => "0";
   requires "Pod::Wordlist" => "0";
   requires "Test::CPAN::Changes" => "0.19";
+  requires "Test::EOL" => "0";
+  requires "Test::Mojibake" => "0";
   requires "Test::More" => "0.96";
   requires "Test::Pod" => "1.41";
   requires "Test::Pod::Coverage" => "1.08";
+  requires "Test::Portability::Files" => "0";
   requires "Test::Spelling" => "0.12";
   requires "Test::Vars" => "0.014";
+  requires "Test::Version" => "1";
   requires "warnings" => "0";
 };
 
