@@ -7,5 +7,7 @@ pm_to_blib
 SSL
 *.tar.gz
 t/CAN_TALK_TO_OURSELF
+.tidyall.d/
+tidyall.ERR
 t/live/ENABLED
 xx*
