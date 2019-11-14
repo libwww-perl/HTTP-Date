@@ -1,6 +1,7 @@
 Change history for HTTP-Date
 
 {{$NEXT}}
+    - Applied PerlTidy to lib and t files
 
 6.03      2019-11-13 14:11:51Z
     - RT123557 Fix for DST test issues (GH#14) (@pludlamCVL)
