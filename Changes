@@ -1,6 +1,6 @@
 Change history for HTTP-Date
 
-{{$NEXT}}
+6.04      2019-11-14 22:22:50Z
     - Replace vars with our (GH#15) (James Raspass)
     - Tidy lib and t files (GH#16) (Olaf Alders)
 

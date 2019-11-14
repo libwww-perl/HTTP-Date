@@ -20,7 +20,7 @@ my %WriteMakefileArgs = (
     "Exporter" => 0,
     "Time::Local" => 0,
     "Time::Zone" => 0,
-    "strict" => 0,
+    "strict" => 0
   },
   "TEST_REQUIRES" => {
     "ExtUtils::MakeMaker" => 0,
