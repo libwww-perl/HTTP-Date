@@ -57,7 +57,7 @@
       "runtime" : {
          "requires" : {
             "Exporter" : "0",
-            "Time::Local" : "0",
+            "Time::Local" : "1.20",
             "Time::Zone" : "0",
             "perl" : "5.006002",
             "strict" : "0"
