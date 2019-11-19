@@ -18,7 +18,7 @@ my %WriteMakefileArgs = (
   "NAME" => "HTTP::Date",
   "PREREQ_PM" => {
     "Exporter" => 0,
-    "Time::Local" => 0,
+    "Time::Local" => "1.28",
     "Time::Zone" => 0,
     "strict" => 0
   },
@@ -46,7 +46,7 @@ my %FallbackPrereqs = (
   "IPC::Open3" => 0,
   "Test" => 0,
   "Test::More" => 0,
-  "Time::Local" => 0,
+  "Time::Local" => "1.28",
   "Time::Zone" => 0,
   "strict" => 0,
   "warnings" => 0

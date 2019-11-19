@@ -6,7 +6,7 @@ HTTP::Date - HTTP::Date - date conversion routines
 
 # VERSION
 
-version 6.04
+version 6.05
 
 # SYNOPSIS
 
@@ -115,7 +115,7 @@ time2str() and str2time(), are exported by default.
 
 # SEE ALSO
 
-["time" in perlfunc](https://metacpan.org/pod/perlfunc#time), [Time::Zone](https://metacpan.org/pod/Time%3A%3AZone)
+["time" in perlfunc](https://metacpan.org/pod/perlfunc#time), [Time::Zone](https://metacpan.org/pod/Time::Zone)
 
 # AUTHOR
 
