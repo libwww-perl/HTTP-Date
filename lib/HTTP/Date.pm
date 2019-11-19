@@ -2,7 +2,7 @@ package HTTP::Date;
 
 use strict;
 
-our $VERSION = '6.05';
+our $VERSION = '6.06';
 
 require Exporter;
 our @ISA       = qw(Exporter);
