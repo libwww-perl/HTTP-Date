@@ -1,6 +1,7 @@
 Change history for HTTP-Date
 
 {{$NEXT}}
+    - Use copyright year rather than range (GH#18) (Olaf Alders)
 
 6.05      2019-11-19 03:02:32Z
     - Bump minimum version of Time::Local to 1.28 (GH#17) (Olaf Alders)
