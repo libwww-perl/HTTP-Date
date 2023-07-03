@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 135;
+use Test::More tests => 141;
 use HTTP::Date;
 
 # test str2time for supported dates.  Test cases with 2 digit year
@@ -35,6 +35,7 @@ my (@tests) = (
     'Feb  3 1994',    # Unix 'ls -l' format
 
     "02-03-94  12:00AM",    # Windows 'dir' format
+    "02-03-1994  12:00AM",  # Windows 'dir' format with four-digit year
 
     # ISO 8601 formats
     '1994-02-03 00:00:00 +0000',
@@ -156,6 +157,15 @@ is( $t, "1996-11-12 13:05:00" );
 
 $t = time2iso( str2time("11-12-96 12:05PM") );
 is( $t, "1996-11-12 12:05:00" );
+
+$t = time2iso( str2time("11-12-01 12:00PM") );
+is( $t, "2001-11-12 12:00:00" );
+
+$t = time2iso( str2time("11-12-1996 12:00AM") );
+is( $t, "1996-11-12 00:00:00" );
+
+$t = time2iso( str2time("11-12-2022 12:00AM") );
+is( $t, "2022-11-12 00:00:00" );
 
 $t = str2time("2000-01-01 00:00:01.234");
 note "FRAC $t = ", time2iso($t);

@@ -179,7 +179,7 @@ sub parse_date ($) {
 
         ||
 
-        # Windows 'dir' 11-12-96  03:52PM
+        # Windows 'dir': '11-12-96  03:52PM' and four-digit year variant
         (
         ( $mon, $day, $yr, $hr, $min, $ampm )
         = /^
@@ -187,7 +187,7 @@ sub parse_date ($) {
              -
           (\d{2})                # day
              -
-          (\d{2})                # year
+          (\d{2,4})              # year
              \s+
           (\d\d?):(\d\d)([APap][Mm])  # hour:min AM or PM
              \s*$
@@ -365,7 +365,8 @@ The function is able to parse the following formats:
  "Feb  3  1994"      -- Unix 'ls -l' format
  "Feb  3 17:03"      -- Unix 'ls -l' format
 
- "11-15-96  03:52PM" -- Windows 'dir' format
+ "11-15-96  03:52PM"   -- Windows 'dir' format
+ "11-15-1996  03:52PM" -- Windows 'dir' format with four-digit year
 
 The parser ignores leading and trailing whitespace.  It also allow the
 seconds to be missing and the month to be numerical in most formats.
