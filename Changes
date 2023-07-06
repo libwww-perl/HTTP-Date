@@ -1,5 +1,7 @@
 Change history for HTTP-Date
 
+{{$NEXT}}
+
 6.06      2023-07-06 22:29:55Z
     - Use copyright year rather than range (GH#18) (Olaf Alders)
     - Replace "Test" with "Test::More" (GH#20) (James Raspass)
