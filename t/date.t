@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 141;
+use Test::More tests => 144;
 use HTTP::Date;
 
 # test str2time for supported dates.  Test cases with 2 digit year
@@ -53,7 +53,10 @@ my (@tests) = (
     '  03   Feb   1994  0:00  ',
 
     # Tests a commonly used (faulty?) date format of php cms systems
-    'Thu, 03 Feb 1994 00:00:00 +0000 GMT'
+    'Thu, 03 Feb 1994 00:00:00 +0000 GMT',
+
+    # Test with Time::Zone
+    '03 Feb 1994 02:00:00 CEST',
 );
 
 my $time = 760233600;    # assume broken POSIX counting of seconds
