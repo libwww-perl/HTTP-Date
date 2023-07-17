@@ -3,6 +3,7 @@ Change history for HTTP-Date
 {{$NEXT}}
 
     - Add test with Time::Zone (GH#25) (Michal Josef Špaček)
+    - Add test with bad Time::Zone string (Michal Josef Špaček)
 
 6.06      2023-07-06 22:29:55Z
     - Use copyright year rather than range (GH#18) (Olaf Alders)
