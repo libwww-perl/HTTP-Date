@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 144;
+use Test::More tests => 146;
 use HTTP::Date;
 
 # test str2time for supported dates.  Test cases with 2 digit year
@@ -117,6 +117,9 @@ for (
     '1980-01-01 25:00:00',
     '1980-01-01 00:61:00',
     '1980-01-01 00:00:61',
+
+    # Bad timezone string
+    '01 Jan 1994 02:00:00 BAD',
 ) {
     my $bad = 0;
     eval {
