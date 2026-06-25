@@ -171,7 +171,7 @@ sub parse_date ($) {
         (?::?([0-9][0-9](?:\.[0-9]*)?))?  # optional seconds (and fractional)
      )?                    # optional clock
         \s*
-     ([-+]?[0-9][0-9]?:?(:?[0-9][0-9])?
+     ([-+]?[0-9][0-9]?:?(?:[0-9][0-9])?
       |Z|z)?               # timezone  (Z is "zero meridian", i.e. GMT)
         \s*$
     /x
