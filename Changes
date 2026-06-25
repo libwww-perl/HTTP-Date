@@ -1,5 +1,7 @@
 Change history for HTTP-Date
 
+{{$NEXT}}
+
 6.07      2026-06-25 15:12:09Z
 
     - Add test with Time::Zone (GH#25) (Michal Josef Špaček)
