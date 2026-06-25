@@ -3,7 +3,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 152;
+use Test::More tests => 156;
 use HTTP::Date;
 
 # test str2time for supported dates.  Test cases with 2 digit year
@@ -197,6 +197,17 @@ use HTTP::Date qw(parse_date);
 
 my @d = parse_date("Jan 1 2001");
 is_deeply( \@d, [2001, 1, 1, 0, 0, 0, undef] );
+
+# A malformed timezone with a doubled colon must be rejected, not silently
+# captured as the timezone. RT #101378 / GH #7.
+is_deeply( [ parse_date("1996-02-29 12:00:00 -01::00") ],
+    [], 'malformed timezone -01::00 is rejected' );
+
+# Well-formed timezone variants must still parse, returning the timezone intact.
+for my $tz ('-01:00', '-0100', '-01') {
+    my @d = parse_date("1996-02-29 12:00:00 $tz");
+    is( $d[6], $tz, "timezone $tz still accepted" );
+}
 
 # This test will break around year 2070
 is( parse_date("03-Feb-20"), "2020-02-03 00:00:00" );
