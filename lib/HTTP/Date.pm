@@ -88,6 +88,14 @@ sub parse_date ($) {
     local ($_) = shift;
     return unless defined;
 
+    # Reject over-long input up front, before any regex runs, so hostile
+    # strings cannot drive the parsing regexes into pathological backtracking.
+    # Length is measured as given (leading/trailing whitespace included).  This
+    # cap is a security limit, not a tunable: every format we accept is far
+    # shorter, and the parsing regexes still contain adjacent unbounded
+    # quantifiers, so raising it demands re-benchmarking against hostile input.
+    return if length($_) > 64;
+
     # More lax parsing below
     s/^\s+//;                                            # kill leading space
     s/^(?:Sun|Mon|Tue|Wed|Thu|Fri|Sat)[a-z]*,?\s*//i;    # Useless weekday
@@ -336,6 +344,12 @@ In scalar context the numbers are interpolated in a string of the
 
 If the date is unrecognized, then the empty list is returned (C<undef> in
 scalar context).
+
+As a safeguard against pathological input, strings longer than 64
+characters are rejected without being parsed.  The length is measured on the
+string as given, before any leading or trailing whitespace is trimmed, so
+heavily padded input may be rejected even if its trimmed payload would fit.
+Every date format this module recognizes is far shorter than this limit.
 
 The function is able to parse the following formats:
 
